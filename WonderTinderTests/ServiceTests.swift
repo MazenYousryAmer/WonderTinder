@@ -8,7 +8,7 @@
 import XCTest
 @testable import WonderTinder
 
-class NetworkManagerTests: XCTestCase {
+class ServiceTests: XCTestCase {
     var sut: NetworkManager?
 //    var mockedService: BaseService = MockService()
     

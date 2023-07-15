@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 enum MockService: BaseService {    
     case mock
 }

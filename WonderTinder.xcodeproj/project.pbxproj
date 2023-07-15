@@ -23,12 +23,19 @@
 		88AD373B2A6190F200373D03 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD373A2A6190F200373D03 /* BaseService.swift */; };
 		88AD373E2A61941900373D03 /* CharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD373D2A61941900373D03 /* CharactersService.swift */; };
 		88AD37402A619ADB00373D03 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD373F2A619ADB00373D03 /* NetworkManager.swift */; };
-		88AD37422A61A4F900373D03 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37412A61A4F900373D03 /* NetworkManagerTests.swift */; };
+		88AD37422A61A4F900373D03 /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37412A61A4F900373D03 /* ServiceTests.swift */; };
 		88AD37452A61A5A600373D03 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37442A61A5A600373D03 /* MockService.swift */; };
 		88AD37462A61A5E500373D03 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37442A61A5A600373D03 /* MockService.swift */; };
 		88AD37472A61A76100373D03 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD373A2A6190F200373D03 /* BaseService.swift */; };
 		88AD37492A61F26800373D03 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37482A61F26700373D03 /* Utils.swift */; };
 		88AD374B2A61FCEB00373D03 /* CharactersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD374A2A61FCEB00373D03 /* CharactersModel.swift */; };
+		88AD374F2A62C48E00373D03 /* SuperHeroesConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD374E2A62C48E00373D03 /* SuperHeroesConfigurator.swift */; };
+		88AD37512A62C4E500373D03 /* SuperHeroesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37502A62C4E500373D03 /* SuperHeroesPresenter.swift */; };
+		88AD37542A62CAE900373D03 /* SuperHeroesConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37532A62CAE900373D03 /* SuperHeroesConfiguratorTests.swift */; };
+		88AD37562A62E70900373D03 /* SuperHeroesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37552A62E70900373D03 /* SuperHeroesInteractorTests.swift */; };
+		88AD37582A62EA0F00373D03 /* SuperHeroesPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37572A62EA0F00373D03 /* SuperHeroesPresenterMock.swift */; };
+		88AD37592A62EA2400373D03 /* SuperHeroesPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37572A62EA0F00373D03 /* SuperHeroesPresenterMock.swift */; };
+		88AD375B2A62EB3000373D03 /* SuperHeroesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD375A2A62EB3000373D03 /* SuperHeroesViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +76,16 @@
 		88AD373A2A6190F200373D03 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		88AD373D2A61941900373D03 /* CharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersService.swift; sourceTree = "<group>"; };
 		88AD373F2A619ADB00373D03 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		88AD37412A61A4F900373D03 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		88AD37412A61A4F900373D03 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		88AD37442A61A5A600373D03 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
 		88AD37482A61F26700373D03 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		88AD374A2A61FCEB00373D03 /* CharactersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersModel.swift; sourceTree = "<group>"; };
+		88AD374E2A62C48E00373D03 /* SuperHeroesConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesConfigurator.swift; sourceTree = "<group>"; };
+		88AD37502A62C4E500373D03 /* SuperHeroesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesPresenter.swift; sourceTree = "<group>"; };
+		88AD37532A62CAE900373D03 /* SuperHeroesConfiguratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesConfiguratorTests.swift; sourceTree = "<group>"; };
+		88AD37552A62E70900373D03 /* SuperHeroesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesInteractorTests.swift; sourceTree = "<group>"; };
+		88AD37572A62EA0F00373D03 /* SuperHeroesPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesPresenterMock.swift; sourceTree = "<group>"; };
+		88AD375A2A62EB3000373D03 /* SuperHeroesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,12 +141,12 @@
 				88AD36FD2A61625100373D03 /* AppDelegate.swift */,
 				88AD36FF2A61625100373D03 /* SceneDelegate.swift */,
 				88AD372D2A61819700373D03 /* SuperHeroesCardsScene */,
+				88AD373C2A6193CA00373D03 /* NetworkLayer */,
 				88AD37032A61625200373D03 /* Main.storyboard */,
 				88AD37062A61625300373D03 /* Assets.xcassets */,
 				88AD37082A61625300373D03 /* LaunchScreen.storyboard */,
 				88AD370B2A61625300373D03 /* Info.plist */,
 				88AD37322A61877700373D03 /* Constants.swift */,
-				88AD373C2A6193CA00373D03 /* NetworkLayer */,
 			);
 			path = WonderTinder;
 			sourceTree = "<group>";
@@ -141,10 +154,11 @@
 		88AD37132A61625300373D03 /* WonderTinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				88AD37522A62CABF00373D03 /* SuperHeroesCardsScene */,
 				88AD37432A61A59800373D03 /* Mocks */,
 				88AD37142A61625300373D03 /* WonderTinderTests.swift */,
 				88AD37342A61879900373D03 /* ConstantsTests.swift */,
-				88AD37412A61A4F900373D03 /* NetworkManagerTests.swift */,
+				88AD37412A61A4F900373D03 /* ServiceTests.swift */,
 			);
 			path = WonderTinderTests;
 			sourceTree = "<group>";
@@ -163,7 +177,9 @@
 			children = (
 				88AD37012A61625100373D03 /* SuperHeroesViewController.swift */,
 				88AD37362A618C0700373D03 /* SuperHeroesInteractor.swift */,
+				88AD37502A62C4E500373D03 /* SuperHeroesPresenter.swift */,
 				88AD37382A618CBC00373D03 /* CharactersWorker.swift */,
+				88AD374E2A62C48E00373D03 /* SuperHeroesConfigurator.swift */,
 			);
 			path = SuperHeroesCardsScene;
 			sourceTree = "<group>";
@@ -182,8 +198,19 @@
 			isa = PBXGroup;
 			children = (
 				88AD37442A61A5A600373D03 /* MockService.swift */,
+				88AD37572A62EA0F00373D03 /* SuperHeroesPresenterMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		88AD37522A62CABF00373D03 /* SuperHeroesCardsScene */ = {
+			isa = PBXGroup;
+			children = (
+				88AD37532A62CAE900373D03 /* SuperHeroesConfiguratorTests.swift */,
+				88AD37552A62E70900373D03 /* SuperHeroesInteractorTests.swift */,
+				88AD375A2A62EB3000373D03 /* SuperHeroesViewControllerTests.swift */,
+			);
+			path = SuperHeroesCardsScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,10 +348,13 @@
 				88AD37462A61A5E500373D03 /* MockService.swift in Sources */,
 				88AD37372A618C0700373D03 /* SuperHeroesInteractor.swift in Sources */,
 				88AD37392A618CBC00373D03 /* CharactersWorker.swift in Sources */,
+				88AD374F2A62C48E00373D03 /* SuperHeroesConfigurator.swift in Sources */,
 				88AD37332A61877700373D03 /* Constants.swift in Sources */,
 				88AD37022A61625200373D03 /* SuperHeroesViewController.swift in Sources */,
 				88AD373B2A6190F200373D03 /* BaseService.swift in Sources */,
+				88AD37512A62C4E500373D03 /* SuperHeroesPresenter.swift in Sources */,
 				88AD37492A61F26800373D03 /* Utils.swift in Sources */,
+				88AD37592A62EA2400373D03 /* SuperHeroesPresenterMock.swift in Sources */,
 				88AD36FE2A61625100373D03 /* AppDelegate.swift in Sources */,
 				88AD374B2A61FCEB00373D03 /* CharactersModel.swift in Sources */,
 				88AD37002A61625100373D03 /* SceneDelegate.swift in Sources */,
@@ -336,8 +366,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88AD37422A61A4F900373D03 /* NetworkManagerTests.swift in Sources */,
+				88AD375B2A62EB3000373D03 /* SuperHeroesViewControllerTests.swift in Sources */,
+				88AD37582A62EA0F00373D03 /* SuperHeroesPresenterMock.swift in Sources */,
+				88AD37422A61A4F900373D03 /* ServiceTests.swift in Sources */,
 				88AD37152A61625300373D03 /* WonderTinderTests.swift in Sources */,
+				88AD37542A62CAE900373D03 /* SuperHeroesConfiguratorTests.swift in Sources */,
+				88AD37562A62E70900373D03 /* SuperHeroesInteractorTests.swift in Sources */,
 				88AD37352A61879900373D03 /* ConstantsTests.swift in Sources */,
 				88AD37472A61A76100373D03 /* BaseService.swift in Sources */,
 				88AD37452A61A5A600373D03 /* MockService.swift in Sources */,
@@ -514,8 +548,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,8 +574,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

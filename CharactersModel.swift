@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Items : Codable {
     let resourceURI : String?
     let name : String?
@@ -23,9 +22,7 @@ struct Items : Codable {
         resourceURI = try values.decodeIfPresent(String.self, forKey: .resourceURI)
         name = try values.decodeIfPresent(String.self, forKey: .name)
     }
-
 }
-
 
 struct Comics : Codable {
     let available : Int?
@@ -48,9 +45,7 @@ struct Comics : Codable {
         items = try values.decodeIfPresent([Items].self, forKey: .items)
         returned = try values.decodeIfPresent(Int.self, forKey: .returned)
     }
-
 }
-
 
 struct DataResult : Codable {
     let offset : Int?
@@ -76,7 +71,6 @@ struct DataResult : Codable {
         count = try values.decodeIfPresent(Int.self, forKey: .count)
         results = try values.decodeIfPresent([Results].self, forKey: .results)
     }
-
 }
 
 struct Events : Codable {
@@ -100,7 +94,6 @@ struct Events : Codable {
         items = try values.decodeIfPresent([Items].self, forKey: .items)
         returned = try values.decodeIfPresent(Int.self, forKey: .returned)
     }
-
 }
 
 struct Urls : Codable {
@@ -118,7 +111,6 @@ struct Urls : Codable {
         type = try values.decodeIfPresent(String.self, forKey: .type)
         url = try values.decodeIfPresent(String.self, forKey: .url)
     }
-
 }
 
 struct MarvelCharacterModel : Codable {
@@ -151,7 +143,6 @@ struct MarvelCharacterModel : Codable {
         etag = try values.decodeIfPresent(String.self, forKey: .etag)
         data = try values.decodeIfPresent(DataResult.self, forKey: .data)
     }
-
 }
 
 
@@ -197,7 +188,6 @@ struct Results : Codable {
         events = try values.decodeIfPresent(Events.self, forKey: .events)
         urls = try values.decodeIfPresent([Urls].self, forKey: .urls)
     }
-
 }
 
 struct Series : Codable {
@@ -221,7 +211,6 @@ struct Series : Codable {
         items = try values.decodeIfPresent([Items].self, forKey: .items)
         returned = try values.decodeIfPresent(Int.self, forKey: .returned)
     }
-
 }
 
 
@@ -246,10 +235,7 @@ struct Stories : Codable {
         items = try values.decodeIfPresent([Items].self, forKey: .items)
         returned = try values.decodeIfPresent(Int.self, forKey: .returned)
     }
-
 }
-
-
 
 struct Thumbnail : Codable {
     let path : String?
@@ -266,7 +252,6 @@ struct Thumbnail : Codable {
         path = try values.decodeIfPresent(String.self, forKey: .path)
         `extension` = try values.decodeIfPresent(String.self, forKey: .extension)
     }
-
 }
 
 
