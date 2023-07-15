@@ -7,11 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class SuperHeroesViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        CharactersWorker().getCharacters()
+    }
+    
+    func getList() {
+        
     }
 
 
