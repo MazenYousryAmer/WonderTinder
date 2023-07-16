@@ -16,19 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qu-g8-4VZ">
-                                <rect key="frame" x="175" y="416" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6qu-g8-4VZ">
+                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="rz4-7E-WYk">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGe-pg-hkP">
+                                <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="5Ul-0j-3Qf"/>
+                                    <constraint firstAttribute="height" constant="300" id="d1r-JJ-cbA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YGe-pg-hkP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3zH-Cn-qwy"/>
+                            <constraint firstItem="YGe-pg-hkP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Kk-qD-e0c"/>
+                            <constraint firstItem="6qu-g8-4VZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FGm-8q-i3t"/>
+                            <constraint firstItem="rz4-7E-WYk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gkc-97-Wi4"/>
+                            <constraint firstItem="6qu-g8-4VZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JUj-XS-pq1"/>
+                            <constraint firstItem="rz4-7E-WYk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dbb-sk-Und"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="lbl" destination="6qu-g8-4VZ" id="mLo-4w-4YZ"/>
+                        <outlet property="cardContainerView" destination="YGe-pg-hkP" id="xss-j1-o5D"/>
+                        <outlet property="errorLabel" destination="6qu-g8-4VZ" id="Qzr-oY-yYM"/>
+                        <outlet property="loadingIndicator" destination="rz4-7E-WYk" id="Opj-Nb-R61"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -39,6 +59,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

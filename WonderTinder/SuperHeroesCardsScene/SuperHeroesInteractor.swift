@@ -9,7 +9,8 @@ import Foundation
 
 protocol InteractorInterface: AnyObject {
     func fetchCharacters()
-    func changelbl()
+    func storeViewModel(viewModel: WonderSuperHeroViewModel)
+    func setIsLiked(_ isliked: Bool,for superHeroCard: SuperHeroCardView)
 }
 
 class SuperHeroesInteractor {
@@ -18,20 +19,34 @@ class SuperHeroesInteractor {
     
     var presenter: PresenterInterface
     var worker = CharactersWorker()
+    var storage: WonderSuperHeroStorage!
+//    var viewModel: WonderSuperHeroViewModel?
     
     required init(presenter: PresenterInterface) {
         self.presenter = presenter
     }
-
-    func changelbl() {
-        presenter.changelbl()
-    }
 }
 
 extension SuperHeroesInteractor: InteractorInterface {
+    func setIsLiked(_ isliked: Bool, for superHeroCard: SuperHeroCardView) {
+        isliked ? superHeroCard.superHeroCharacter.like() : superHeroCard.superHeroCharacter.dislike()
+        print(storage.viewModel?.allSuperheroCharaters[superHeroCard.tag].isLiked)
+    }
+    
     func fetchCharacters() {
-        worker.fetchCharacters(completion: { model, error in
-            print(model)
+        worker.fetchCharacters(completion: {[weak self] model, error in
+            guard let model = model else {
+                DispatchQueue.main.async {
+                    self?.presenter.presentError()
+                }
+                return
+            }
+            self?.presenter.presentCharacters(model: model)
         })
+    }
+    
+    func storeViewModel(viewModel: WonderSuperHeroViewModel){
+//        self.viewModel = viewModel
+        storage.viewModel = viewModel
     }
 }

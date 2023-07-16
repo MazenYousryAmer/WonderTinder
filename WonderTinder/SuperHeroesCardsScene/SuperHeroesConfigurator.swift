@@ -12,7 +12,6 @@ class SuperHeroesConfigurator {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "SuperHeroesViewController") as! SuperHeroesViewController
-        
 //        let viewController = SuperHeroesViewController()
         let presenter = SuperHeroesPresenter(displayView: viewController)
         let interactor = SuperHeroesInteractor(presenter: presenter)

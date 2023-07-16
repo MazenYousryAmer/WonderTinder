@@ -32,15 +32,12 @@ class SuperHeroesViewControllerTests: XCTestCase {
 }
 
 class SuperHeroesInteractorSpy: InteractorInterface {
-    func changelbl() {
+    func storeViewModel(viewModel: WonderTinder.WonderSuperHeroViewModel) {
         
     }
-    
     
     var areCharactersFetched = false
     func fetchCharacters() {
         areCharactersFetched = true
     }
-    
-    
 }

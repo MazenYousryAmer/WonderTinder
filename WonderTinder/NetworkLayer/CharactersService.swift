@@ -20,9 +20,3 @@ extension CharactersService: BaseService {
         return params
     }
 }
-
-//let privateKeyMd5 = MD5Hex(string: "\(Int((Date().timeIntervalSince1970 * 1000.0)))\(Constants.privateKey)\(Constants.publicKey)")
-
-
-
-

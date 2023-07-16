@@ -8,19 +8,36 @@
 import Foundation
 
 protocol PresenterInterface: AnyObject {
-    func changelbl()
+    func presentError()
+    func presentCharacters(model: MarvelCharacterModel)
 }
 
 class SuperHeroesPresenter {
-    weak var displayView: ViewControllerInterface?
+    weak var displayView: ViewControllerDisplayInterface?
     
-    required init(displayView: ViewControllerInterface) {
+    required init(displayView: ViewControllerDisplayInterface) {
         self.displayView = displayView
     }
 }
 
 extension SuperHeroesPresenter: PresenterInterface {
-    func changelbl() {
-        displayView?.changelbl()
+    func presentCharacters(model: MarvelCharacterModel) {
+        
+        guard let heroArray = model.data?.results, heroArray.count >= 1 else {
+            return
+        }
+        
+        let viewModel = WonderSuperHeroViewModel()
+        for hero in heroArray {
+            let wonderModel = WonderSuperHeroModel(name: hero.name ?? "", url: "")
+            viewModel.allSuperheroCharaters.append(wonderModel)
+        }
+        
+        displayView?.showSuperheroes(viewModel: viewModel)
     }
+    
+    func presentError() {
+        displayView?.showError()
+    }
+    
 }

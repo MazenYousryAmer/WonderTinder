@@ -14,8 +14,8 @@
             filePath = "WonderTinder/SuperHeroesCardsScene/SuperHeroesViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,88 +23,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "864183F4-022F-4787-890C-C80CDC681E85"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WonderTinder/NetworkLayer/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "request(service:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "03DDA7FE-9B51-4F56-BE75-50F3F5092359"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WonderTinder/NetworkLayer/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "request(service:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "03DDA7FE-9B51-4F56-BE75-50F3F5092359 - 3fc3769385f75b34"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WonderTinder.NetworkManager.request(service: WonderTinder.BaseService, completion: (Swift.Optional&lt;WonderTinder.MarvelCharacterModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "WonderTinder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinder/NetworkLayer/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "3370">
-               </Location>
-               <Location
-                  uuid = "03DDA7FE-9B51-4F56-BE75-50F3F5092359 - 10f6e99df77cd884"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WonderTinder.NetworkManager.request(service: WonderTinder.BaseService, completion: (Swift.Optional&lt;WonderTinder.MarvelCharacterModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "WonderTinder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinder/NetworkLayer/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "79">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DCF7B9F8-E2B8-423C-815E-D83E690A9B9D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WonderTinder/NetworkLayer/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "request(service:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C3272B8E-090C-4997-9546-166F38DB26A1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WonderTinder/SuperHeroesCardsScene/CharactersWorker.swift"
@@ -119,49 +39,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4FE18BF0-85F8-41EA-962B-7D599440AD5C"
+            uuid = "A0437CE2-B213-4A0D-A544-34906B382D70"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WonderTinder/NetworkLayer/NetworkManager.swift"
+            filePath = "WonderTinder/SuperHeroCardView/SuperHeroCardView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "panCard(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2427CF7A-FAFC-4E9E-832A-7CAD8565B3DA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WonderTinder/SuperHeroesCardsScene/SuperHeroesInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "request(service:completion:)"
+            landmarkName = "setIsLiked(_:for:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "4FE18BF0-85F8-41EA-962B-7D599440AD5C - 3fc3769385f764eb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WonderTinder.NetworkManager.request(service: WonderTinder.BaseService, completion: (Swift.Optional&lt;WonderTinder.MarvelCharacterModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "WonderTinder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinder/NetworkLayer/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "2852">
-               </Location>
-               <Location
-                  uuid = "4FE18BF0-85F8-41EA-962B-7D599440AD5C - 3fc3769385f764eb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in WonderTinder.NetworkManager.request(service: WonderTinder.BaseService, completion: (Swift.Optional&lt;WonderTinder.MarvelCharacterModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "WonderTinder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinder/NetworkLayer/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "33"
-                  endingLineNumber = "33"
-                  offsetFromSymbolStart = "3660">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -12,7 +12,11 @@ class CharactersWorker: NSObject {
     func fetchCharacters(completion: @escaping (MarvelCharacterModel?, Error?) -> Void) {
         let service = CharactersService.characters
         NetworkManager().request(service: service, completion: { charatersModel , error in
-            print(charatersModel)
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(charatersModel, nil)
+            }
         })
     }
 }
