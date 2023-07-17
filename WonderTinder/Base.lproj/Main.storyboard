@@ -27,7 +27,7 @@
                             </activityIndicatorView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGe-pg-hkP">
                                 <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="5Ul-0j-3Qf"/>
                                     <constraint firstAttribute="height" constant="300" id="d1r-JJ-cbA"/>
@@ -55,13 +55,94 @@
             </objects>
             <point key="canvasLocation" x="48" y="-2"/>
         </scene>
+        <!--Super Heroes Listing View Controller-->
+        <scene sceneID="3in-aK-BX2">
+            <objects>
+                <viewController storyboardIdentifier="SuperHeroesListingViewController" id="leA-gj-kwE" customClass="SuperHeroesListingViewController" customModule="WonderTinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oxX-tc-Ree">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who are you favorite super heroes ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d17-Do-931">
+                                <rect key="frame" x="28.666666666666657" y="414" width="335.66666666666674" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="t7p-jW-YQR">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SuperHeroTableViewCell" rowHeight="50" id="tkl-iE-pWK" customClass="SuperHeroTableViewCell" customModule="WonderTinder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tkl-iE-pWK" id="VtA-IB-dF2">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kir-66-d0R">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnh-BQ-pK0">
+                                                            <rect key="frame" x="8" y="8" width="335" height="34"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="cnh-BQ-pK0" firstAttribute="top" secondItem="Kir-66-d0R" secondAttribute="top" constant="8" id="8zX-qZ-XIK"/>
+                                                        <constraint firstItem="cnh-BQ-pK0" firstAttribute="leading" secondItem="Kir-66-d0R" secondAttribute="leading" constant="8" id="acp-hV-0dN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="cnh-BQ-pK0" secondAttribute="bottom" constant="8" id="nb4-Uz-0E7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="cnh-BQ-pK0" secondAttribute="trailing" constant="50" id="uUu-et-Ri2"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kir-66-d0R" firstAttribute="leading" secondItem="VtA-IB-dF2" secondAttribute="leading" id="CLB-HU-fAJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Kir-66-d0R" secondAttribute="trailing" id="PDo-9G-mDu"/>
+                                                <constraint firstItem="Kir-66-d0R" firstAttribute="top" secondItem="VtA-IB-dF2" secondAttribute="top" id="W1l-lr-e0K"/>
+                                                <constraint firstAttribute="bottom" secondItem="Kir-66-d0R" secondAttribute="bottom" id="fJU-xl-fsQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="colorView" destination="Kir-66-d0R" id="5Uy-Aw-oE8"/>
+                                            <outlet property="nameLabel" destination="cnh-BQ-pK0" id="1Qa-JI-SWz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="leA-gj-kwE" id="wBx-5D-lWF"/>
+                                    <outlet property="delegate" destination="leA-gj-kwE" id="8S3-QV-eHu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tzU-V5-uQz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="d17-Do-931" firstAttribute="centerX" secondItem="oxX-tc-Ree" secondAttribute="centerX" id="0mB-SU-qF9"/>
+                            <constraint firstItem="tzU-V5-uQz" firstAttribute="bottom" secondItem="t7p-jW-YQR" secondAttribute="bottom" id="8Ll-Gs-BgV"/>
+                            <constraint firstItem="t7p-jW-YQR" firstAttribute="leading" secondItem="tzU-V5-uQz" secondAttribute="leading" id="Et0-Rl-LvQ"/>
+                            <constraint firstItem="d17-Do-931" firstAttribute="centerY" secondItem="oxX-tc-Ree" secondAttribute="centerY" id="U7y-OR-1y5"/>
+                            <constraint firstItem="t7p-jW-YQR" firstAttribute="top" secondItem="tzU-V5-uQz" secondAttribute="top" id="YHY-W9-fC7"/>
+                            <constraint firstItem="tzU-V5-uQz" firstAttribute="trailing" secondItem="t7p-jW-YQR" secondAttribute="trailing" id="z1P-BQ-j51"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="errorLabel" destination="d17-Do-931" id="0NQ-hN-ule"/>
+                        <outlet property="tableHeroes" destination="t7p-jW-YQR" id="Bjl-Dt-Px2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="70F-89-s1Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841.9847328244274" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

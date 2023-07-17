@@ -14,13 +14,12 @@ protocol ViewControllerDisplayInterface: AnyObject {
     func showLoading()
     func hideLoading()
     func showEmptyView()
-    
 }
 
 class SuperHeroesViewController: UIViewController {
     
     var interactor: InteractorInterface!
-    var viewModel: WonderSuperHeroViewModel?
+//    var viewModel: WonderSuperHeroViewModel?
     
     @IBOutlet var errorLabel: UILabel!
     @IBOutlet weak var cardContainerView: UIView!
@@ -29,42 +28,15 @@ class SuperHeroesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-//        CharactersWorker().fetchCharacters()
+        cardContainerView.layer.cornerRadius = 5.0
         showLoading()
-        
-//        hideError()
         interactor.fetchCharacters()
-        
-        
-
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-    }
-    
-//    func getList() {
-//        interactor?.fetchCharacters()
-////        CharactersWorker().fetchCharacters(completion: {model, error in
-////            print("here")
-////        })
-//    }
-    
     
     func createCards() {
-//        for superheroCharater in viewModel!.allSuperheroCharaters {
-//            let card = SuperHeroCardView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-//            card.configureCard(model: superheroCharater)
-//
-////            let pan = UIPanGestureRecognizer(target: self, action: #selector(self.handleTap(_:)))
-////            tap.delegate = self
-////            card.addGestureRecognizer(pan)
-//            cardContainerView.addSubview(card)
-////            cardContainerView.vi
-//
-//        }
-        
-        for i in (1..<viewModel!.allSuperheroCharaters.count) {
-            let superheroCharater = viewModel!.allSuperheroCharaters[i]
+        let viewModel = interactor.getSuperHeroesViewModel()
+        for i in (1..<viewModel.allSuperheroCharaters.count) {
+            let superheroCharater = viewModel.allSuperheroCharaters[i]
             let card = SuperHeroCardView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
             card.tag = i
             card.delegate = self
@@ -72,21 +44,13 @@ class SuperHeroesViewController: UIViewController {
             cardContainerView.addSubview(card)
         }
     }
-    
-    
-//    @objc func handleTap(_ sender: UIPanGestureRecognizer) {
-//        let card = sender.view!
-//        let point = sender.translation(in: view)
-//        print(point)
-//        card.center = CGPoint(x: view.center.x + point.x, y: view.center.y + point.y - (cardContainerView.frame.height / 2) )
-//    }
-    
 }
 
 extension SuperHeroesViewController: ViewControllerDisplayInterface {
     func showEmptyView() {
+        cardContainerView.isHidden = true
         errorLabel.isHidden = false
-        errorLabel.text = "No cards!"
+        errorLabel.text = "No more cards!"
     }
     
     func showLoading() {
@@ -101,10 +65,8 @@ extension SuperHeroesViewController: ViewControllerDisplayInterface {
     
     func showSuperheroes(viewModel: WonderSuperHeroViewModel) {
         hideLoading()
-        interactor.storeViewModel(viewModel: viewModel)
-        self.viewModel = viewModel
+        interactor.setSuperHeroesViewModel(viewModel: viewModel)
         createCards()
-        
     }
     
     func showError() {
@@ -123,9 +85,10 @@ extension SuperHeroesViewController: SuperHeroCarViewDelegate {
     func likeSuperHero(shouldLike: Bool, for card: SuperHeroCardView) {
         interactor.setIsLiked(shouldLike, for: card)
         cardContainerView.viewWithTag(card.tag)?.removeFromSuperview()
+        if cardContainerView.subviews.count == 0 {
+            showEmptyView()
+        }
     }
-    
-    
 }
 
 

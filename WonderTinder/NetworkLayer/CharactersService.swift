@@ -10,10 +10,19 @@ import Foundation
 
 enum CharactersService {
     case characters
+    case characterImage(url: String)
 }
 
 extension CharactersService: BaseService {
-    var path: String { "\(Constants.serverUrl)/characters" }
+    var path: String {
+        
+        switch self {
+        case .characters:
+            return "\(Constants.serverUrl)/characters"
+        case .characterImage(let urlString):
+            return urlString
+        }
+    }
     var method: ServiceMethod { .get }
     var parameters: [String: String] {
         let params: [String: String] = ["ts":"\(Int((Date().timeIntervalSince1970 * 1000.0)))","apikey": Constants.publicKey, "hash": MD5Hex(string: "\(Int((Date().timeIntervalSince1970 * 1000.0)))\(Constants.privateKey)\(Constants.publicKey)")]

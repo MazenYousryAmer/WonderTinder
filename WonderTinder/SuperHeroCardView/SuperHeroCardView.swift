@@ -40,6 +40,11 @@ class SuperHeroCardView: UIView {
         self.superHeroCharacter = model
         charNameLabel.text = model.name
         cardCenter = self.center
+
+        guard let url = URL(string: model.url ?? "") else {
+            return
+        }
+        charImageView.downloadImage(from: url)
     }
     
     private func animateLike(xPos: CGFloat) {

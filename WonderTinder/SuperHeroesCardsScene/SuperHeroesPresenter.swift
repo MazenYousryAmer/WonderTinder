@@ -29,7 +29,7 @@ extension SuperHeroesPresenter: PresenterInterface {
         
         let viewModel = WonderSuperHeroViewModel()
         for hero in heroArray {
-            let wonderModel = WonderSuperHeroModel(name: hero.name ?? "", url: "")
+            let wonderModel = WonderSuperHeroModel(name: hero.name ?? "", url: "\( hero.thumbnail?.path ?? "").\(hero.thumbnail?.extension ?? "")")
             viewModel.allSuperheroCharaters.append(wonderModel)
         }
         

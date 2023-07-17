@@ -9,6 +9,7 @@ import Foundation
 import var CommonCrypto.CC_MD5_DIGEST_LENGTH
 import func CommonCrypto.CC_MD5
 import typealias CommonCrypto.CC_LONG
+import UIKit
 
 func MD5(string: String) -> Data {
     let length = Int(CC_MD5_DIGEST_LENGTH)
@@ -30,4 +31,22 @@ func MD5(string: String) -> Data {
  func MD5Hex(string: String) -> String {
     let md5Data = MD5(string: string)
     return md5Data.map { String(format: "%02hhx", $0) }.joined()
+}
+
+
+extension UIImageView {
+    
+    func downloadImage(from url: URL) {
+        print("Download Started")
+        
+        NetworkManager().request(url: url, completion: {[unowned self] image , error in
+            guard let image = image else {
+                return
+            }
+            DispatchQueue.main.async {
+                self.image = image
+            }
+        })
+    }
+    
 }

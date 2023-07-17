@@ -6,16 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 protocol NetworkingService {
-    func request(service: BaseService, completion: @escaping (MarvelCharacterModel?, Error?) -> Void)
+    func request<T: Codable>(service: BaseService, completion: @escaping (T?, Error?) -> Void)
 }
 
 class NetworkManager: NetworkingService {
     
     let session = URLSession.shared
     
-    func request(service: BaseService, completion: @escaping (MarvelCharacterModel?, Error?) -> Void) {
+    func request<T: Codable>(service: BaseService, completion: @escaping (T?, Error?) -> Void) {
         let dataTask = session.dataTask(with: service.urlRequest) {data , response , error in
             print("Data: \(String(describing: data))")
             print("response: \(String(describing: response))")
@@ -26,7 +27,7 @@ class NetworkManager: NetworkingService {
                 return
             }
             do {
-                let model = try JSONDecoder().decode(MarvelCharacterModel.self, from: data)
+                let model = try JSONDecoder().decode(T.self, from: data)
                 DispatchQueue.main.async {
                     completion(model, nil)
                 }
@@ -38,4 +39,17 @@ class NetworkManager: NetworkingService {
         }
         dataTask.resume()
     }
+    
+    func request(url: URL, completion: @escaping (UIImage?, Error?) -> Void) {
+        let dataTask = session.dataTask(with: url) { data, response , error in
+            guard let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completion(nil, error)
+                return
+            }
+            let image = UIImage(data: data)
+            completion(image, nil)
+        }
+        dataTask.resume()
+    }
+    
 }

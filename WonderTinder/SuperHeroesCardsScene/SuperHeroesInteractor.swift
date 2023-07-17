@@ -9,8 +9,9 @@ import Foundation
 
 protocol InteractorInterface: AnyObject {
     func fetchCharacters()
-    func storeViewModel(viewModel: WonderSuperHeroViewModel)
+    func setSuperHeroesViewModel(viewModel: WonderSuperHeroViewModel)
     func setIsLiked(_ isliked: Bool,for superHeroCard: SuperHeroCardView)
+    func getSuperHeroesViewModel() -> WonderSuperHeroViewModel
 }
 
 class SuperHeroesInteractor {
@@ -31,6 +32,7 @@ extension SuperHeroesInteractor: InteractorInterface {
     func setIsLiked(_ isliked: Bool, for superHeroCard: SuperHeroCardView) {
         isliked ? superHeroCard.superHeroCharacter.like() : superHeroCard.superHeroCharacter.dislike()
         print(storage.viewModel?.allSuperheroCharaters[superHeroCard.tag].isLiked)
+        print(storage.viewModel?.allSuperheroCharaters[superHeroCard.tag].url)
     }
     
     func fetchCharacters() {
@@ -45,8 +47,11 @@ extension SuperHeroesInteractor: InteractorInterface {
         })
     }
     
-    func storeViewModel(viewModel: WonderSuperHeroViewModel){
-//        self.viewModel = viewModel
+    func setSuperHeroesViewModel(viewModel: WonderSuperHeroViewModel){
         storage.viewModel = viewModel
+    }
+    
+    func getSuperHeroesViewModel() -> WonderSuperHeroViewModel {
+        return storage.viewModel
     }
 }
