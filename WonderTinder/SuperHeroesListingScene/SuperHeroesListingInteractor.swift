@@ -19,7 +19,6 @@ class SuperHeroesListingInteractor {
     var presenter: SuperHeroesListingPresenter
     var storage: WonderSuperHeroStorage!
     
-    
     required init(presenter: SuperHeroesListingPresenter) {
         self.presenter = presenter
     }
@@ -27,10 +26,10 @@ class SuperHeroesListingInteractor {
 
 extension SuperHeroesListingInteractor: ListingInteractorInterface {
     func listHeroes() {
-//        guard storage.showedSuperHeroes.count > 0 else {
-//            presenter.presentEmptyView()
-//            return
-//        }
+        guard storage.viewModel != nil else {
+            presenter.presentEmptyState()
+            return
+        }
         presenter.presentHeroes(viewModel: storage.viewModel)
     }
     

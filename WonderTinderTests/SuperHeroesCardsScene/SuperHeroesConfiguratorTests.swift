@@ -10,26 +10,21 @@ import XCTest
 
 class SuperHeroesConfiguratorTests: XCTestCase {
     
-    override class func setUp() {
+    override func setUp() {
         super.setUp()
     }
     
-    override class func tearDown() {
+    override func tearDown() {
         super.tearDown()
     }
     
     func testViewControllerIsInitialized() {
-        let viewController = SuperHeroesConfigurator.createSuperheroesScene()
+        let viewController = SuperHeroesConfigurator.createSuperheroesScene(storage: WonderSuperHeroStorage())
         XCTAssertNotNil(viewController)
     }
     
     func testInteractorIsInitialized() {
-        let viewController = SuperHeroesConfigurator.createSuperheroesScene()
+        let viewController = SuperHeroesConfigurator.createSuperheroesScene(storage: WonderSuperHeroStorage())
         XCTAssertNotNil(viewController.interactor)
     }
-    
-//    func testPresenterIsInitialized() {
-//        let viewController = SuperHeroesConfigurator.createSuperheroesScene()
-//        XCTAssertNotNil(viewController.interactor?.presenter)
-//    }
 }

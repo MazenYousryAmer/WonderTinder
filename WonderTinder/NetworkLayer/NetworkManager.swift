@@ -46,6 +46,8 @@ class NetworkManager: NetworkingService {
                 completion(nil, error)
                 return
             }
+            let cachedData = CachedURLResponse(response: response, data: data)
+            URLCache.shared.storeCachedResponse(cachedData, for: URLRequest(url: url))
             let image = UIImage(data: data)
             completion(image, nil)
         }

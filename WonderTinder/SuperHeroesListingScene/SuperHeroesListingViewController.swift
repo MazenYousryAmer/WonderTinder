@@ -56,3 +56,10 @@ extension SuperHeroesListingViewController: UITableViewDataSource {
         return cell
     }
 }
+
+extension SuperHeroesListingViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        70
+    }
+}

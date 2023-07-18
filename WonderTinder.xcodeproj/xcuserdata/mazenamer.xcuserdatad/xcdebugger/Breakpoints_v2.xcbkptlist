@@ -39,22 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A0437CE2-B213-4A0D-A544-34906B382D70"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "WonderTinder/SuperHeroCardView/SuperHeroCardView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "panCard(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BF074F74-68DF-47EE-A489-43D7C39F2333"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -72,7 +56,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "175A12BF-DBB5-4138-A0D8-8F153B642A45"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WonderTinder/SuperHeroesListingScene/SuperHeroesListingViewController.swift"
@@ -87,16 +71,226 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E4AC4F53-8944-4136-B298-CE9F0AFCF287"
+            uuid = "71404061-195E-4F22-AFE9-CA65802646B4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WonderTinder/SuperHeroesCardsScene/SuperHeroesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "SuperHeroesViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "71404061-195E-4F22-AFE9-CA65802646B4 - 9c70d4007bbe4b8e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderTinder.SuperHeroesViewController.cardContainerView.getter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "WonderTinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinder/SuperHeroesCardsScene/SuperHeroesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "94">
+               </Location>
+               <Location
+                  uuid = "71404061-195E-4F22-AFE9-CA65802646B4 - 70a73c67c1ebd39a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderTinder.SuperHeroesViewController.cardContainerView.setter : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "WonderTinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinder/SuperHeroesCardsScene/SuperHeroesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "71404061-195E-4F22-AFE9-CA65802646B4 - 7a3c35324c11e18d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderTinder.SuperHeroesViewController.cardContainerView.modify : Swift.Optional&lt;__C.UIView&gt;"
+                  moduleName = "WonderTinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinder/SuperHeroesCardsScene/SuperHeroesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "71404061-195E-4F22-AFE9-CA65802646B4 - b620bef4f9ee68cb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderTinder.SuperHeroesViewController.cardContainerView.modify : Swift.Optional&lt;__C.UIView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "WonderTinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinder/SuperHeroesCardsScene/SuperHeroesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "71404061-195E-4F22-AFE9-CA65802646B4 - dc5c5d632cbbbd58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderTinder.SuperHeroesViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; WonderTinder.SuperHeroesViewController"
+                  moduleName = "WonderTinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinder/SuperHeroesCardsScene/SuperHeroesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "206">
+               </Location>
+               <Location
+                  uuid = "71404061-195E-4F22-AFE9-CA65802646B4 - fac65704c6cba999"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderTinder.SuperHeroesViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;WonderTinder.SuperHeroesViewController&gt;"
+                  moduleName = "WonderTinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinder/SuperHeroesCardsScene/SuperHeroesViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "163">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "61C884D7-4148-47E1-BF3D-5C920136CA7C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WonderTinderTests/SuperHeroesCardsScene/SuperHeroesViewControllerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "fetchCharacters()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "61C884D7-4148-47E1-BF3D-5C920136CA7C - 5caaa12e1187bdad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderTinderTests.SuperHeroesInteractorSpy.fetchCharacters() -&gt; ()"
+                  moduleName = "WonderTinderTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinderTests/SuperHeroesCardsScene/SuperHeroesViewControllerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "61C884D7-4148-47E1-BF3D-5C920136CA7C - 5caaa12e1187bee7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WonderTinderTests.SuperHeroesInteractorSpy.fetchCharacters() -&gt; ()"
+                  moduleName = "WonderTinderTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mazenamer/Desktop/WonderTinder/WonderTinder/WonderTinderTests/SuperHeroesCardsScene/SuperHeroesViewControllerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "64"
+                  endingLineNumber = "64"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F93CDCF3-E1F3-445E-897A-E8F13D1AA6A6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WonderTinderTests/SuperHeroesCardsScene/SuperHeroesViewControllerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "setSuperHeroesViewModel(viewModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.IDETestFailureBreakpoint">
+         <BreakpointContent
+            uuid = "90EE24ED-874A-4F29-ACEB-7188F0CB2EF4"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "WonderTinder/SuperHeroesListingScene/SuperHeroesListingInteractor.swift"
+            breakpointStackSelectionBehavior = "1">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "C7F117B1-D675-4D3B-9FAA-3BF3081ADDF5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59F2890E-53D5-4C0E-9B7E-6C67C9815917"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WonderTinderTests/SuperHeroesCardsScene/SuperHeroesConfiguratorTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "listHeroes()"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "testViewControllerIsInitialized()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D493A327-3BE8-478D-9184-9BB004EFA05B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WonderTinder/SuperHeroesCardsScene/SuperHeroesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

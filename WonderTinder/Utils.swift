@@ -37,16 +37,24 @@ func MD5(string: String) -> Data {
 extension UIImageView {
     
     func downloadImage(from url: URL) {
-        print("Download Started")
         
-        NetworkManager().request(url: url, completion: {[unowned self] image , error in
-            guard let image = image else {
-                return
-            }
-            DispatchQueue.main.async {
-                self.image = image
-            }
-        })
+        if URLCache.shared.cachedResponse(for: URLRequest(url: url)) != nil {
+//            print("load image from cache")
+            let data = URLCache.shared.cachedResponse(for: URLRequest(url: url))?.data
+            self.image = UIImage(data: data ?? Data())
+        } else {
+            
+//            print("downloading image")
+            NetworkManager().request(url: url, completion: {[weak self] image , error in
+                guard let image = image else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self?.image = image
+                }
+            })
+        }
+        
+
     }
-    
 }

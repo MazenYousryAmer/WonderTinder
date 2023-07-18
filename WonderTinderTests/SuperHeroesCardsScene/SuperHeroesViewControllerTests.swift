@@ -15,8 +15,11 @@ class SuperHeroesViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         spyInteractor = SuperHeroesInteractorSpy()
-        sut = SuperHeroesConfigurator.createSuperheroesScene()
+        sut = SuperHeroesConfigurator.createSuperheroesScene(storage: WonderSuperHeroStorage())
         sut?.interactor = spyInteractor
+        sut?.loadView()
+//        sut?.viewDidLoad()
+        
     }
     
     override func tearDown() {
@@ -29,11 +32,31 @@ class SuperHeroesViewControllerTests: XCTestCase {
         sut?.interactor.fetchCharacters()
         XCTAssertEqual(spyInteractor?.areCharactersFetched, true)
     }
+    
+    func testShowSuperHeroes() {
+        let testViewModel: WonderSuperHeroViewModel = getFakeViewModel()
+        sut?.showSuperheroes(viewModel: testViewModel)
+        XCTAssertEqual(spyInteractor?.isViewModelSet, true)
+        XCTAssertEqual(spyInteractor?.storage.viewModel.allSuperheroCharaters.count, testViewModel.allSuperheroCharaters.count)
+    }
 }
 
 class SuperHeroesInteractorSpy: InteractorInterface {
-    func storeViewModel(viewModel: WonderTinder.WonderSuperHeroViewModel) {
+    
+    var storage = WonderSuperHeroStorage()
+    
+    var isViewModelSet = false
+    func setSuperHeroesViewModel(viewModel: WonderTinder.WonderSuperHeroViewModel) {
+        isViewModelSet = true
+        storage.viewModel = viewModel
+    }
+    
+    func setIsLiked(_ isliked: Bool, for superHeroCard: WonderTinder.SuperHeroCardView) {
         
+    }
+    
+    func getSuperHeroesViewModel() -> WonderTinder.WonderSuperHeroViewModel {
+        return getFakeViewModel()
     }
     
     var areCharactersFetched = false

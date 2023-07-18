@@ -9,6 +9,7 @@ import Foundation
 
 protocol ListingPresenterInterface: AnyObject {
     func presentHeroes(viewModel: WonderSuperHeroViewModel)
+    func presentEmptyState()
 }
 
 class SuperHeroesListingPresenter {
@@ -23,6 +24,10 @@ class SuperHeroesListingPresenter {
 extension SuperHeroesListingPresenter: ListingPresenterInterface {
     func presentHeroes(viewModel: WonderSuperHeroViewModel) {
         let showedSuperHeroes = viewModel.allSuperheroCharaters.filter({ $0.isLiked != nil })
-        showedSuperHeroes.count > 0 ? displayView?.displaySuperHeroes(heroes: showedSuperHeroes.reversed()  ) : displayView?.displayEmptyView()
+        showedSuperHeroes.count > 0 ? displayView?.displaySuperHeroes(heroes: showedSuperHeroes) : displayView?.displayEmptyView()
+    }
+    
+    func presentEmptyState() {
+        displayView?.displayEmptyView()
     }
 }

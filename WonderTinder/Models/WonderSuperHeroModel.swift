@@ -29,4 +29,8 @@ class WonderSuperHeroModel: Codable {
 
 class WonderSuperHeroViewModel: Codable {
     var allSuperheroCharaters: [WonderSuperHeroModel] = []
+    
+    init(chars: [WonderSuperHeroModel]) {
+        self.allSuperheroCharaters = chars
+    }
 }

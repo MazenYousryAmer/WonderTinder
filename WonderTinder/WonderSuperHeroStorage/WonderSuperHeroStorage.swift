@@ -9,5 +9,5 @@ import Foundation
 
 class WonderSuperHeroStorage {
     var viewModel: WonderSuperHeroViewModel!
-    var showedSuperHeroes: [WonderSuperHeroModel] = []
+    var showedSuperHeroes: [WonderSuperHeroModel] = []    
 }

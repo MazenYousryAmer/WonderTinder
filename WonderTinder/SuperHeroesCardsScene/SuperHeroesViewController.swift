@@ -22,7 +22,7 @@ class SuperHeroesViewController: UIViewController {
 //    var viewModel: WonderSuperHeroViewModel?
     
     @IBOutlet var errorLabel: UILabel!
-    @IBOutlet weak var cardContainerView: UIView!
+    @IBOutlet var cardContainerView: UIView!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {

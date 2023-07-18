@@ -26,12 +26,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsw-Na-FuC">
                     <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nzz-rU-rnM">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nzz-rU-rnM">
                             <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </imageView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f6w-TX-q2S">
-                            <rect key="frame" x="10" y="259" width="280" height="31"/>
+                            <rect key="frame" x="10" y="249" width="280" height="31"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z99-6j-l7x">
                                     <rect key="frame" x="8" y="5" width="264" height="21"/>
@@ -64,7 +64,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="f6w-TX-q2S" secondAttribute="bottom" constant="10" id="4pI-5I-CnN"/>
+                        <constraint firstAttribute="bottom" secondItem="f6w-TX-q2S" secondAttribute="bottom" constant="20" id="4pI-5I-CnN"/>
                         <constraint firstAttribute="trailing" secondItem="f6w-TX-q2S" secondAttribute="trailing" constant="10" id="A5C-l6-5gS"/>
                         <constraint firstItem="Nzz-rU-rnM" firstAttribute="top" secondItem="bsw-Na-FuC" secondAttribute="top" id="BdY-Lk-eUD"/>
                         <constraint firstItem="XgN-75-Ghn" firstAttribute="top" secondItem="bsw-Na-FuC" secondAttribute="top" constant="10" id="ESj-6c-AOc"/>

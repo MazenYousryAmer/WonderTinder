@@ -13,9 +13,6 @@
 		88AD37052A61625200373D03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AD37032A61625200373D03 /* Main.storyboard */; };
 		88AD37072A61625300373D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88AD37062A61625300373D03 /* Assets.xcassets */; };
 		88AD370A2A61625300373D03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AD37082A61625300373D03 /* LaunchScreen.storyboard */; };
-		88AD37152A61625300373D03 /* WonderTinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37142A61625300373D03 /* WonderTinderTests.swift */; };
-		88AD371F2A61625300373D03 /* WonderTinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD371E2A61625300373D03 /* WonderTinderUITests.swift */; };
-		88AD37212A61625300373D03 /* WonderTinderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37202A61625300373D03 /* WonderTinderUITestsLaunchTests.swift */; };
 		88AD37332A61877700373D03 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37322A61877700373D03 /* Constants.swift */; };
 		88AD37352A61879900373D03 /* ConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37342A61879900373D03 /* ConstantsTests.swift */; };
 		88AD37372A618C0700373D03 /* SuperHeroesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37362A618C0700373D03 /* SuperHeroesInteractor.swift */; };
@@ -45,17 +42,11 @@
 		88AD376C2A646B1600373D03 /* SuperHeroesListingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD376B2A646B1600373D03 /* SuperHeroesListingPresenter.swift */; };
 		88AD376E2A646B2B00373D03 /* SuperHeroesListingConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD376D2A646B2B00373D03 /* SuperHeroesListingConfigurator.swift */; };
 		88AD37712A6476B100373D03 /* SuperHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37702A6476B100373D03 /* SuperHeroTableViewCell.swift */; };
+		88AD37772A66C0DA00373D03 /* FakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AD37762A66C0DA00373D03 /* FakeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		88AD37112A61625300373D03 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 88AD36F22A61625100373D03 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 88AD36F92A61625100373D03;
-			remoteInfo = WonderTinder;
-		};
-		88AD371B2A61625300373D03 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 88AD36F22A61625100373D03 /* Project object */;
 			proxyType = 1;
@@ -74,10 +65,6 @@
 		88AD37092A61625300373D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88AD370B2A61625300373D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88AD37102A61625300373D03 /* WonderTinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WonderTinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		88AD37142A61625300373D03 /* WonderTinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderTinderTests.swift; sourceTree = "<group>"; };
-		88AD371A2A61625300373D03 /* WonderTinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WonderTinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		88AD371E2A61625300373D03 /* WonderTinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderTinderUITests.swift; sourceTree = "<group>"; };
-		88AD37202A61625300373D03 /* WonderTinderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WonderTinderUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		88AD37322A61877700373D03 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		88AD37342A61879900373D03 /* ConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTests.swift; sourceTree = "<group>"; };
 		88AD37362A618C0700373D03 /* SuperHeroesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesInteractor.swift; sourceTree = "<group>"; };
@@ -104,6 +91,7 @@
 		88AD376B2A646B1600373D03 /* SuperHeroesListingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesListingPresenter.swift; sourceTree = "<group>"; };
 		88AD376D2A646B2B00373D03 /* SuperHeroesListingConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesListingConfigurator.swift; sourceTree = "<group>"; };
 		88AD37702A6476B100373D03 /* SuperHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroTableViewCell.swift; sourceTree = "<group>"; };
+		88AD37762A66C0DA00373D03 /* FakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,25 +109,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88AD37172A61625300373D03 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		88AD36F12A61625100373D03 = {
 			isa = PBXGroup;
 			children = (
-				88AD375C2A6316A000373D03 /* WonderSuperHeroModel.swift */,
-				88AD374A2A61FCEB00373D03 /* MarvelCharacterModel.swift */,
-				88AD37482A61F26700373D03 /* Utils.swift */,
 				88AD36FC2A61625100373D03 /* WonderTinder */,
 				88AD37132A61625300373D03 /* WonderTinderTests */,
-				88AD371D2A61625300373D03 /* WonderTinderUITests */,
 				88AD36FB2A61625100373D03 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,7 +126,6 @@
 			children = (
 				88AD36FA2A61625100373D03 /* WonderTinder.app */,
 				88AD37102A61625300373D03 /* WonderTinderTests.xctest */,
-				88AD371A2A61625300373D03 /* WonderTinderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,10 +135,12 @@
 			children = (
 				88AD36FD2A61625100373D03 /* AppDelegate.swift */,
 				88AD36FF2A61625100373D03 /* SceneDelegate.swift */,
+				88AD37482A61F26700373D03 /* Utils.swift */,
 				88AD372D2A61819700373D03 /* SuperHeroesCardsScene */,
 				88AD37662A646AB500373D03 /* SuperHeroesListingScene */,
 				88AD37632A64690300373D03 /* WonderSuperHeroStorage */,
 				88AD373C2A6193CA00373D03 /* NetworkLayer */,
+				88AD37752A66BAFA00373D03 /* Models */,
 				88AD375E2A631D4500373D03 /* SuperHeroCardView */,
 				88AD37032A61625200373D03 /* Main.storyboard */,
 				88AD37062A61625300373D03 /* Assets.xcassets */,
@@ -178,20 +156,10 @@
 			children = (
 				88AD37522A62CABF00373D03 /* SuperHeroesCardsScene */,
 				88AD37432A61A59800373D03 /* Mocks */,
-				88AD37142A61625300373D03 /* WonderTinderTests.swift */,
 				88AD37342A61879900373D03 /* ConstantsTests.swift */,
 				88AD37412A61A4F900373D03 /* ServiceTests.swift */,
 			);
 			path = WonderTinderTests;
-			sourceTree = "<group>";
-		};
-		88AD371D2A61625300373D03 /* WonderTinderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				88AD371E2A61625300373D03 /* WonderTinderUITests.swift */,
-				88AD37202A61625300373D03 /* WonderTinderUITestsLaunchTests.swift */,
-			);
-			path = WonderTinderUITests;
 			sourceTree = "<group>";
 		};
 		88AD372D2A61819700373D03 /* SuperHeroesCardsScene */ = {
@@ -221,6 +189,7 @@
 			children = (
 				88AD37442A61A5A600373D03 /* MockService.swift */,
 				88AD37572A62EA0F00373D03 /* SuperHeroesPresenterMock.swift */,
+				88AD37762A66C0DA00373D03 /* FakeViewModel.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -272,6 +241,15 @@
 			path = cells;
 			sourceTree = "<group>";
 		};
+		88AD37752A66BAFA00373D03 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				88AD375C2A6316A000373D03 /* WonderSuperHeroModel.swift */,
+				88AD374A2A61FCEB00373D03 /* MarvelCharacterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -310,24 +288,6 @@
 			productReference = 88AD37102A61625300373D03 /* WonderTinderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		88AD37192A61625300373D03 /* WonderTinderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 88AD372A2A61625300373D03 /* Build configuration list for PBXNativeTarget "WonderTinderUITests" */;
-			buildPhases = (
-				88AD37162A61625300373D03 /* Sources */,
-				88AD37172A61625300373D03 /* Frameworks */,
-				88AD37182A61625300373D03 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				88AD371C2A61625300373D03 /* PBXTargetDependency */,
-			);
-			name = WonderTinderUITests;
-			productName = WonderTinderUITests;
-			productReference = 88AD371A2A61625300373D03 /* WonderTinderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -342,10 +302,6 @@
 						CreatedOnToolsVersion = 14.1;
 					};
 					88AD370F2A61625300373D03 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = 88AD36F92A61625100373D03;
-					};
-					88AD37192A61625300373D03 = {
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 88AD36F92A61625100373D03;
 					};
@@ -366,7 +322,6 @@
 			targets = (
 				88AD36F92A61625100373D03 /* WonderTinder */,
 				88AD370F2A61625300373D03 /* WonderTinderTests */,
-				88AD37192A61625300373D03 /* WonderTinderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -384,13 +339,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		88AD370E2A61625300373D03 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88AD37182A61625300373D03 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -435,23 +383,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				88AD375B2A62EB3000373D03 /* SuperHeroesViewControllerTests.swift in Sources */,
+				88AD37772A66C0DA00373D03 /* FakeViewModel.swift in Sources */,
 				88AD37582A62EA0F00373D03 /* SuperHeroesPresenterMock.swift in Sources */,
 				88AD37422A61A4F900373D03 /* ServiceTests.swift in Sources */,
-				88AD37152A61625300373D03 /* WonderTinderTests.swift in Sources */,
 				88AD37542A62CAE900373D03 /* SuperHeroesConfiguratorTests.swift in Sources */,
 				88AD37562A62E70900373D03 /* SuperHeroesInteractorTests.swift in Sources */,
 				88AD37352A61879900373D03 /* ConstantsTests.swift in Sources */,
 				88AD37472A61A76100373D03 /* BaseService.swift in Sources */,
 				88AD37452A61A5A600373D03 /* MockService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		88AD37162A61625300373D03 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				88AD371F2A61625300373D03 /* WonderTinderUITests.swift in Sources */,
-				88AD37212A61625300373D03 /* WonderTinderUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,11 +401,6 @@
 			isa = PBXTargetDependency;
 			target = 88AD36F92A61625100373D03 /* WonderTinder */;
 			targetProxy = 88AD37112A61625300373D03 /* PBXContainerItemProxy */;
-		};
-		88AD371C2A61625300373D03 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 88AD36F92A61625100373D03 /* WonderTinder */;
-			targetProxy = 88AD371B2A61625300373D03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -694,40 +628,6 @@
 			};
 			name = Release;
 		};
-		88AD372B2A61625300373D03 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Mazen.WonderTinderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WonderTinder;
-			};
-			name = Debug;
-		};
-		88AD372C2A61625300373D03 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Mazen.WonderTinderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WonderTinder;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -754,15 +654,6 @@
 			buildConfigurations = (
 				88AD37282A61625300373D03 /* Debug */,
 				88AD37292A61625300373D03 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		88AD372A2A61625300373D03 /* Build configuration list for PBXNativeTarget "WonderTinderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				88AD372B2A61625300373D03 /* Debug */,
-				88AD372C2A61625300373D03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

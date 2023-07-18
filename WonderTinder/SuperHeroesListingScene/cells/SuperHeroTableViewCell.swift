@@ -10,11 +10,18 @@ import UIKit
 class SuperHeroTableViewCell: UITableViewCell {
     
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var colorView: UIView!
+    @IBOutlet var heroImage: UIImageView!
 
     func configureCell(superHero: WonderSuperHeroModel) {
         nameLabel.text = superHero.name
-        colorView.backgroundColor = superHero.isLiked ?? false ? .green : .red
+        heroImage.layer.cornerRadius = heroImage.frame.width / 2
+        heroImage.layer.borderWidth = 2
+        heroImage.layer.borderColor = superHero.isLiked ?? false ? UIColor.green.cgColor : UIColor.red.cgColor
+        
+        guard let url = URL(string: superHero.url ?? "") else {
+            return
+        }
+        heroImage.downloadImage(from: url)
     }
 
 }

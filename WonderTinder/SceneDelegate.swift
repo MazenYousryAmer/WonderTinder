@@ -16,21 +16,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
+#if DEBUG
         guard let _ = (scene as? UIWindowScene) else { return }
+        URLCache.shared.removeAllCachedResponses()
         
         let storage = WonderSuperHeroStorage()
         let tabView = UITabBarController()
-//        let tabbarItems1 = UITabBarItem(title: "Main", image: nil, tag: 1)
-//        let tabbarItems2 = UITabBarItem(title: "Listing", image: nil, tag: 2)
-//        tabView.tabBar.setItems([tabbarItems1, tabbarItems2], animated: true)
         let mainViewController = SuperHeroesConfigurator.createSuperheroesScene(storage: storage)
         mainViewController.title = "Main"
         let listingViewController = SuperHeroesListingConfigurator.createSuperheroesListingScene(storage: storage)
         listingViewController.title = "List"
-//        tabView.viewControllers = [mainViewController, listingViewController]
         tabView.setViewControllers([mainViewController, listingViewController], animated: true)
         
         self.window?.rootViewController = tabView
+#endif
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

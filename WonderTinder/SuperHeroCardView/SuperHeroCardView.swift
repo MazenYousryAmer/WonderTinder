@@ -23,6 +23,7 @@ class SuperHeroCardView: UIView {
     var cardCenter = CGPoint()
     var superHeroCharacter: WonderSuperHeroModel!
     weak var delegate: SuperHeroCarViewDelegate!
+    private var margin = CGFloat(0.7)
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -64,20 +65,18 @@ class SuperHeroCardView: UIView {
     
     @IBAction func panCard(_ sender: UIPanGestureRecognizer) {
         let point = sender.translation(in: self.superview)
-        print(point)
         self.center = CGPoint(x: cardCenter.x + point.x, y: cardCenter.y + point.y)
         point.x > 0 ? animateLike(xPos: point.x): animateDislike(xPos: point.x)
 
         if sender.state == .ended {
-            if (point.x / cardCenter.x) > 0.7 {
+            if (point.x / cardCenter.x) > margin {
                 UIView.animate(withDuration: 0.3, delay: 0.0, animations: {
                     self.center = CGPoint(x: self.center.x + UIScreen.main.bounds.width, y: self.center.y)
                 }) { _ in
-                    
                     self.delegate.likeSuperHero(shouldLike: true, for: self)
                 }
                 return
-            } else if (point.x / cardCenter.x) < -0.7 {
+            } else if (point.x / cardCenter.x) < margin * -1 {
                 UIView.animate(withDuration: 0.3, delay: 0.0, animations: {
                     self.center = CGPoint(x: self.center.x - UIScreen.main.bounds.width, y: self.center.y)
                 }) { _ in
@@ -87,6 +86,7 @@ class SuperHeroCardView: UIView {
             } else {
                 self.makeNeutral()
             }
+            
             UIView.animate(withDuration: 0.2, delay: 0.0, animations: {
                 self.center = self.cardCenter
             })

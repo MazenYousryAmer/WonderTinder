@@ -19,9 +19,8 @@ class SuperHeroesInteractor {
     var marvelCharacterModel: MarvelCharacterModel?
     
     var presenter: PresenterInterface
-    var worker = CharactersWorker()
+    var characterWorker = CharactersWorker()
     var storage: WonderSuperHeroStorage!
-//    var viewModel: WonderSuperHeroViewModel?
     
     required init(presenter: PresenterInterface) {
         self.presenter = presenter
@@ -31,12 +30,10 @@ class SuperHeroesInteractor {
 extension SuperHeroesInteractor: InteractorInterface {
     func setIsLiked(_ isliked: Bool, for superHeroCard: SuperHeroCardView) {
         isliked ? superHeroCard.superHeroCharacter.like() : superHeroCard.superHeroCharacter.dislike()
-        print(storage.viewModel?.allSuperheroCharaters[superHeroCard.tag].isLiked)
-        print(storage.viewModel?.allSuperheroCharaters[superHeroCard.tag].url)
     }
     
     func fetchCharacters() {
-        worker.fetchCharacters(completion: {[weak self] model, error in
+        characterWorker.fetchCharacters(completion: {[weak self] model, error in
             guard let model = model else {
                 DispatchQueue.main.async {
                     self?.presenter.presentError()
