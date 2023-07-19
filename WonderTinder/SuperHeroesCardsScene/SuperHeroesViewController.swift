@@ -10,16 +10,11 @@ import UIKit
 protocol ViewControllerDisplayInterface: AnyObject {
     func showSuperheroes(viewModel: WonderSuperHeroViewModel)
     func showError()
-    func hideError()
-    func showLoading()
-    func hideLoading()
-    func showEmptyView()
 }
 
 class SuperHeroesViewController: UIViewController {
     
     var interactor: InteractorInterface!
-//    var viewModel: WonderSuperHeroViewModel?
     
     @IBOutlet var errorLabel: UILabel!
     @IBOutlet var cardContainerView: UIView!
@@ -30,7 +25,7 @@ class SuperHeroesViewController: UIViewController {
         // Do any additional setup after loading the view.
         cardContainerView.layer.cornerRadius = 5.0
         showLoading()
-        interactor.fetchCharacters()
+        interactor.fetchCharacters(service: CharactersService.characters)
     }
     
     func createCards() {
@@ -44,13 +39,10 @@ class SuperHeroesViewController: UIViewController {
             cardContainerView.addSubview(card)
         }
     }
-}
-
-extension SuperHeroesViewController: ViewControllerDisplayInterface {
-    func showEmptyView() {
-        cardContainerView.isHidden = true
-        errorLabel.isHidden = false
-        errorLabel.text = "No more cards!"
+    
+    func hideLoading() {
+        cardContainerView.isHidden = false
+        loadingIndicator.isHidden = true
     }
     
     func showLoading() {
@@ -58,11 +50,18 @@ extension SuperHeroesViewController: ViewControllerDisplayInterface {
         loadingIndicator.isHidden = false
     }
     
-    func hideLoading() {
-        cardContainerView.isHidden = false
-        loadingIndicator.isHidden = true
+    func hideError() {
+        errorLabel.isHidden = true
     }
     
+    func showEmptyView() {
+        cardContainerView.isHidden = true
+        errorLabel.isHidden = false
+        errorLabel.text = "No more cards!"
+    }
+}
+
+extension SuperHeroesViewController: ViewControllerDisplayInterface {
     func showSuperheroes(viewModel: WonderSuperHeroViewModel) {
         hideLoading()
         interactor.setSuperHeroesViewModel(viewModel: viewModel)
@@ -75,14 +74,10 @@ extension SuperHeroesViewController: ViewControllerDisplayInterface {
         errorLabel.isHidden = false
         errorLabel.text = "Sorry, couldn't load data."
     }
-    
-    func hideError() {
-        errorLabel.isHidden = true
-    }
 }
 
 extension SuperHeroesViewController: SuperHeroCarViewDelegate {
-    func likeSuperHero(shouldLike: Bool, for card: SuperHeroCardView) {
+    func likeSuperHero(shouldLike: Bool, card: SuperHeroCardView) {
         interactor.setIsLiked(shouldLike, for: card)
         cardContainerView.viewWithTag(card.tag)?.removeFromSuperview()
         if cardContainerView.subviews.count == 0 {

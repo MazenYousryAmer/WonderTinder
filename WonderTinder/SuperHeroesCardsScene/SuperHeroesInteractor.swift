@@ -8,7 +8,7 @@
 import Foundation
 
 protocol InteractorInterface: AnyObject {
-    func fetchCharacters()
+    func fetchCharacters(service: BaseService)
     func setSuperHeroesViewModel(viewModel: WonderSuperHeroViewModel)
     func setIsLiked(_ isliked: Bool,for superHeroCard: SuperHeroCardView)
     func getSuperHeroesViewModel() -> WonderSuperHeroViewModel
@@ -18,7 +18,7 @@ class SuperHeroesInteractor {
     
     var marvelCharacterModel: MarvelCharacterModel?
     
-    var presenter: PresenterInterface
+    var presenter: PresenterInterface!
     var characterWorker = CharactersWorker()
     var storage: WonderSuperHeroStorage!
     
@@ -32,8 +32,8 @@ extension SuperHeroesInteractor: InteractorInterface {
         isliked ? superHeroCard.superHeroCharacter.like() : superHeroCard.superHeroCharacter.dislike()
     }
     
-    func fetchCharacters() {
-        characterWorker.fetchCharacters(completion: {[weak self] model, error in
+    func fetchCharacters(service: BaseService) {
+        characterWorker.fetchCharacters(service: service, completion: {[weak self] model, error in
             guard let model = model else {
                 DispatchQueue.main.async {
                     self?.presenter.presentError()

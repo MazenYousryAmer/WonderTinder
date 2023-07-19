@@ -27,6 +27,10 @@ class SuperHeroesListingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getHeroesList()
+    }
+    
+    func getHeroesList() {
         interactor.listHeroes()
     }
 }

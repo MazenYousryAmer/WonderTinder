@@ -16,12 +16,6 @@ struct Items : Codable {
         case resourceURI = "resourceURI"
         case name = "name"
     }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        resourceURI = try values.decodeIfPresent(String.self, forKey: .resourceURI)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-    }
 }
 
 struct Comics : Codable {
@@ -36,14 +30,6 @@ struct Comics : Codable {
         case collectionURI = "collectionURI"
         case items = "items"
         case returned = "returned"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        available = try values.decodeIfPresent(Int.self, forKey: .available)
-        collectionURI = try values.decodeIfPresent(String.self, forKey: .collectionURI)
-        items = try values.decodeIfPresent([Items].self, forKey: .items)
-        returned = try values.decodeIfPresent(Int.self, forKey: .returned)
     }
 }
 
@@ -62,15 +48,6 @@ struct DataResult : Codable {
         case count = "count"
         case results = "results"
     }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        offset = try values.decodeIfPresent(Int.self, forKey: .offset)
-        limit = try values.decodeIfPresent(Int.self, forKey: .limit)
-        total = try values.decodeIfPresent(Int.self, forKey: .total)
-        count = try values.decodeIfPresent(Int.self, forKey: .count)
-        results = try values.decodeIfPresent([Results].self, forKey: .results)
-    }
 }
 
 struct Events : Codable {
@@ -86,14 +63,6 @@ struct Events : Codable {
         case items = "items"
         case returned = "returned"
     }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        available = try values.decodeIfPresent(Int.self, forKey: .available)
-        collectionURI = try values.decodeIfPresent(String.self, forKey: .collectionURI)
-        items = try values.decodeIfPresent([Items].self, forKey: .items)
-        returned = try values.decodeIfPresent(Int.self, forKey: .returned)
-    }
 }
 
 struct Urls : Codable {
@@ -104,12 +73,6 @@ struct Urls : Codable {
 
         case type = "type"
         case url = "url"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        type = try values.decodeIfPresent(String.self, forKey: .type)
-        url = try values.decodeIfPresent(String.self, forKey: .url)
     }
 }
 
@@ -131,17 +94,6 @@ struct MarvelCharacterModel : Codable {
         case attributionHTML = "attributionHTML"
         case etag = "etag"
         case data = "data"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        code = try values.decodeIfPresent(Int.self, forKey: .code)
-        status = try values.decodeIfPresent(String.self, forKey: .status)
-        copyright = try values.decodeIfPresent(String.self, forKey: .copyright)
-        attributionText = try values.decodeIfPresent(String.self, forKey: .attributionText)
-        attributionHTML = try values.decodeIfPresent(String.self, forKey: .attributionHTML)
-        etag = try values.decodeIfPresent(String.self, forKey: .etag)
-        data = try values.decodeIfPresent(DataResult.self, forKey: .data)
     }
 }
 
@@ -172,21 +124,7 @@ struct Results : Codable {
         case stories = "stories"
         case events = "events"
         case urls = "urls"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        description = try values.decodeIfPresent(String.self, forKey: .description)
-        modified = try values.decodeIfPresent(String.self, forKey: .modified)
-        thumbnail = try values.decodeIfPresent(Thumbnail.self, forKey: .thumbnail)
-        resourceURI = try values.decodeIfPresent(String.self, forKey: .resourceURI)
-        comics = try values.decodeIfPresent(Comics.self, forKey: .comics)
-        series = try values.decodeIfPresent(Series.self, forKey: .series)
-        stories = try values.decodeIfPresent(Stories.self, forKey: .stories)
-        events = try values.decodeIfPresent(Events.self, forKey: .events)
-        urls = try values.decodeIfPresent([Urls].self, forKey: .urls)
+        
     }
 }
 
@@ -227,14 +165,6 @@ struct Stories : Codable {
         case items = "items"
         case returned = "returned"
     }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        available = try values.decodeIfPresent(Int.self, forKey: .available)
-        collectionURI = try values.decodeIfPresent(String.self, forKey: .collectionURI)
-        items = try values.decodeIfPresent([Items].self, forKey: .items)
-        returned = try values.decodeIfPresent(Int.self, forKey: .returned)
-    }
 }
 
 struct Thumbnail : Codable {
@@ -245,12 +175,6 @@ struct Thumbnail : Codable {
 
         case path = "path"
         case `extension` = "extension"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        path = try values.decodeIfPresent(String.self, forKey: .path)
-        `extension` = try values.decodeIfPresent(String.self, forKey: .extension)
     }
 }
 

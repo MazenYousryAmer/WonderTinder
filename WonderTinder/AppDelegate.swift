@@ -10,13 +10,22 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        
-        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        URLCache.shared.removeAllCachedResponses()
+        let storage = WonderSuperHeroStorage()
+        let tabView = UITabBarController()
+        let mainViewController = SuperHeroesConfigurator.createSuperheroesScene(storage: storage)
+        mainViewController.title = "Main"
+        let listingViewController = SuperHeroesListingConfigurator.createSuperheroesListingScene(storage: storage)
+        listingViewController.title = "List"
+        tabView.setViewControllers([mainViewController, listingViewController], animated: true)
+        self.window?.rootViewController = tabView
+        window?.makeKeyAndVisible()
         return true
     }
 

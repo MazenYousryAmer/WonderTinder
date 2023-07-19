@@ -17,9 +17,7 @@ class SuperHeroesViewControllerTests: XCTestCase {
         spyInteractor = SuperHeroesInteractorSpy()
         sut = SuperHeroesConfigurator.createSuperheroesScene(storage: WonderSuperHeroStorage())
         sut?.interactor = spyInteractor
-        sut?.loadView()
-//        sut?.viewDidLoad()
-        
+        sut?.loadView()        
     }
     
     override func tearDown() {
@@ -29,15 +27,34 @@ class SuperHeroesViewControllerTests: XCTestCase {
     }
     
     func testFetchCharacters() {
-        sut?.interactor.fetchCharacters()
+        sut?.interactor.fetchCharacters(service: CharactersService.characters)
         XCTAssertEqual(spyInteractor?.areCharactersFetched, true)
     }
     
     func testShowSuperHeroes() {
-        let testViewModel: WonderSuperHeroViewModel = getFakeViewModel()
+        let testViewModel: WonderSuperHeroViewModel = getFakeWonderSuperHeroViewModel()
         sut?.showSuperheroes(viewModel: testViewModel)
         XCTAssertEqual(spyInteractor?.isViewModelSet, true)
         XCTAssertEqual(spyInteractor?.storage.viewModel.allSuperheroCharaters.count, testViewModel.allSuperheroCharaters.count)
+    }
+    
+    func testLikeSuperHero() {
+        let card = SuperHeroCardView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        card.tag = 1
+        card.delegate = self
+        card.configureCard(model: getFakeWonderSuperHeroModel())
+        sut?.cardContainerView.addSubview(card)
+        card.delegate.likeSuperHero(shouldLike: true, card: card)
+        XCTAssertEqual(spyInteractor?.isSetIsLikedCalled, true)
+    }
+}
+
+extension SuperHeroesViewControllerTests: SuperHeroCarViewDelegate {
+    
+    func likeSuperHero(shouldLike: Bool, card: WonderTinder.SuperHeroCardView) {
+        XCTAssertTrue(shouldLike)
+        XCTAssertEqual(card.tag, 1)
+        spyInteractor?.setIsLiked(shouldLike, for: card)
     }
 }
 
@@ -51,16 +68,17 @@ class SuperHeroesInteractorSpy: InteractorInterface {
         storage.viewModel = viewModel
     }
     
+    var isSetIsLikedCalled = false
     func setIsLiked(_ isliked: Bool, for superHeroCard: WonderTinder.SuperHeroCardView) {
-        
+        isSetIsLikedCalled = true
     }
     
     func getSuperHeroesViewModel() -> WonderTinder.WonderSuperHeroViewModel {
-        return getFakeViewModel()
+        return getFakeWonderSuperHeroViewModel()
     }
     
     var areCharactersFetched = false
-    func fetchCharacters() {
+    func fetchCharacters(service: WonderTinder.BaseService) {
         areCharactersFetched = true
     }
 }

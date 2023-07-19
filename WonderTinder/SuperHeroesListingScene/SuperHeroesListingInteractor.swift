@@ -16,17 +16,17 @@ protocol ListingInteractorInterface: AnyObject {
 
 class SuperHeroesListingInteractor {
     
-    var presenter: SuperHeroesListingPresenter
+    var presenter: ListingPresenterInterface!
     var storage: WonderSuperHeroStorage!
     
-    required init(presenter: SuperHeroesListingPresenter) {
+    required init(presenter: ListingPresenterInterface) {
         self.presenter = presenter
     }
 }
 
 extension SuperHeroesListingInteractor: ListingInteractorInterface {
     func listHeroes() {
-        guard storage.viewModel != nil else {
+        guard let viewModel = storage.viewModel else {
             presenter.presentEmptyState()
             return
         }

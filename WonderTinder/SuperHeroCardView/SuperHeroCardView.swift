@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SuperHeroCarViewDelegate: AnyObject {
-    func likeSuperHero(shouldLike: Bool, for: SuperHeroCardView)
+    func likeSuperHero(shouldLike: Bool, card: SuperHeroCardView)
 }
 
 class SuperHeroCardView: UIView {
@@ -67,24 +67,27 @@ class SuperHeroCardView: UIView {
         let point = sender.translation(in: self.superview)
         self.center = CGPoint(x: cardCenter.x + point.x, y: cardCenter.y + point.y)
         point.x > 0 ? animateLike(xPos: point.x): animateDislike(xPos: point.x)
-
+        
+        self.transform = CGAffineTransform.init(rotationAngle: ((center.x - cardCenter.x) * 0.2) / (UIScreen.main.bounds.width / 2))
+        
         if sender.state == .ended {
             if (point.x / cardCenter.x) > margin {
                 UIView.animate(withDuration: 0.3, delay: 0.0, animations: {
                     self.center = CGPoint(x: self.center.x + UIScreen.main.bounds.width, y: self.center.y)
                 }) { _ in
-                    self.delegate.likeSuperHero(shouldLike: true, for: self)
+                    self.delegate.likeSuperHero(shouldLike: true, card: self)
                 }
                 return
             } else if (point.x / cardCenter.x) < margin * -1 {
                 UIView.animate(withDuration: 0.3, delay: 0.0, animations: {
                     self.center = CGPoint(x: self.center.x - UIScreen.main.bounds.width, y: self.center.y)
                 }) { _ in
-                    self.delegate.likeSuperHero(shouldLike: false, for: self)
+                    self.delegate.likeSuperHero(shouldLike: false, card: self)
                 }
                 return
             } else {
                 self.makeNeutral()
+                self.transform = .identity
             }
             
             UIView.animate(withDuration: 0.2, delay: 0.0, animations: {

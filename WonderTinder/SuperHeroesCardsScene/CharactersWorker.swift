@@ -7,10 +7,8 @@
 
 import Foundation
 
-class CharactersWorker: NSObject {
-    
-    func fetchCharacters(completion: @escaping (MarvelCharacterModel?, Error?) -> Void) {
-        let service = CharactersService.characters
+class CharactersWorker {
+    func fetchCharacters(service: BaseService, completion: @escaping (MarvelCharacterModel?, Error?) -> Void) {
         NetworkManager().request(service: service, completion: { charatersModel , error in
             if let error = error {
                 completion(nil, error)

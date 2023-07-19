@@ -7,15 +7,14 @@
 
 import Foundation
 
-enum MockService: BaseService {    
+enum MockService {
     case mock
 }
 
-extension MockService {
+extension MockService : BaseService {
     var path: String { "www.apple.com" }
     var method: ServiceMethod { .get }
     var parameters: [String: String] {
-        let params: [String: String] = ["test": "Mazen"]
-        return params
+        return ["test": "Mazen"]
     }
 }
